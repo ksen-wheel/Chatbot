@@ -17,4 +17,4 @@ generated_statement = current_account.generate_statement(from_date, to_date, rec
 generated_statement.send()
 current_account.print_statements()
 statement_number = input('Номер выписки')
-current_account.get_statement(int(statement_number)). send()
+current_account.get_statement(int(statement_number)).send()

@@ -31,8 +31,8 @@ users = {
 
 
 def login(email, password):
-    if email not  in users:
+    if email not in users:
         raise ValueError('Неизвестный пользователь')
-    if password != users[email].password:
+    if not users[email].is_password_valid(password):
         raise ValueError('Некорректый пароль')
     return users[email]
